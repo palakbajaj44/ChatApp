@@ -1,0 +1,237 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+.title{
+  text-decoration: underline;
+  font-size: larger;
+}
+.title__mid{
+  text-decoration: underline;
+  font-size: medium;
+}
+.Main--box{
+  display: flex;
+  height: 80vh;
+  width: 90vw;
+  margin:auto auto;
+  margin-top: 7vh;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+.Username--main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+/* Userslist styling */
+.Main--box--users{
+  background-color: tomato;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 30vw;
+}
+.Main--box--users--list{
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  overflow-y: scroll;
+}
+.username{
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  cursor: pointer;
+  word-break: break-all;
+  background-color: lemonchiffon;
+  border-radius: 2px;
+  margin: 1px;
+}
+.username--active{
+  cursor: pointer;
+  background-color: lightgreen;
+  word-break: break-all;
+  border-radius: 2px;
+  margin: 1px;
+}
+
+
+/*for the box content of message area*/
+.Main--box--chat{
+  background-color: turquoise;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 60vw;
+}
+.Main--box--chat--messagearea{
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  /* background-color: whitesmoke; */
+  overflow-y: scroll;
+}
+/* for Message body*/
+.Message--main{
+  max-width: 90%;
+  align-self: flex-end;
+  text-align: end;
+}
+.Message--oth{
+  align-self: flex-start;
+}
+.Message--main--content{
+  word-break: break-all;
+  text-align:start;
+  display: inline-block;
+  font-size: larger;
+}
+.Message--main--time{
+  display: inline-block;
+  font-size: small;
+}
+
+/* Group message css*/
+.GMessage--main{
+  max-width: 90%;
+  /* display: flex; */
+  align-self: flex-end;
+  text-align: end;
+}
+.GMessage--oth{
+  align-self: flex-start;
+}
+.GMessage--main--content{
+  word-break: break-all;
+  text-align:start;
+  display: inline-block;
+  font-size: larger;
+}
+.GMessage--main--time{
+  display: inline-block;
+  align-self: flex-end;
+  font-size: small;
+}
+.flex--active{
+  display: flex;
+}
+.flex--center{
+  justify-content: space-around;
+}
+.GMessage--main--author{
+  /* justify-self: flex-start; */
+  align-self: flex-start;
+  font-size: small;
+
+}
+
+/* for create group user*/
+.group--main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+.group--main-box{
+  position: relative;
+  background-color:skyblue;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 300;
+  height: 70vh;
+  width: 80%;
+}
+/* .groupname-form{
+  position: absolute;
+  top: 0;
+  right:0;
+} */
+.cancel{
+  width: 100%;
+  text-decoration-line: underline;
+  font-weight: 300;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: medium;
+  background: linear-gradient(to right,pink,rgb(192, 49, 104));
+}
+.scroll--list{
+  overflow-y: scroll;
+}
+.group--main-box--divider{
+  display: flex;
+  justify-content: center;
+  background-color: lime;
+  height: 80%;
+  width: 95%;
+  margin:auto auto;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.group--default--list{
+  height: 100%;
+  width: 50%;
+  background-color: linen;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.group--selected--list{
+  height: 100%;
+  width: 50%;
+  background-color: navajowhite;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.group--users--list{
+  padding-top: 5%;
+  display: flex;
+  word-break: break-all;
+  flex-direction: column;
+  height: 80%;
+  overflow-y: scroll;
+}
+.grouplistname{
+  cursor: pointer;
+  word-break: break-all;
+  background: linear-gradient(to right,pink,skyblue,lightgreen);
+  border-radius: 4px;
+  margin: 1px;
+}
+.group--user{
+  cursor: pointer;
+  background-color: lightgray;
+  word-break: break-all;
+  border-radius: 2px;
+  margin: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
