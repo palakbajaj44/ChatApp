@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%></title>
+</head>
+<body>
+	<a href="/afterlogin">After Login</a>
+	<form action="/logout" method='post'>
+		<input type="hidden" name="_csrf" value=<%=csrfTok%>>
+		<button type="submit">Logout</button>
+	</form>
+	<h1>Sorry For Inconvince .Something went wrong !!<h1>
+	<h3>Internal Error Occurend . Fixing the error !!<h3>
+	
+
+</body>
+</html>

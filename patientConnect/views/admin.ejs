@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Patient Connect</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+a
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/vendor.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="/js/modernizr.js"></script>
+    <script src="/js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="/image/x-icon">
+    <link rel="icon" href="favicon.ico" type="/image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header s-header--blog">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                  <img src="/images/logo.png" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="row header-nav-wrap wide">
+            <!-- <ul class="header-main-nav">
+            </ul> -->
+
+            <ul class="header-social">
+                <li><form action="/admin/logout" method='post'>
+                    <input type="hidden" name="_csrf" value=<%=csrfTok%>>
+                    <button class="btn btn-success navbar-btn" >Log Out</button></form>  </li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+    </header> <!-- end header -->
+
+
+    <!-- page header
+    ================================================== -->
+    <section class="page-header">
+
+        <div class="row page-header__content narrower text-center">
+            <div class="col-full">
+
+                <!-- <h3 class="subhead">Our Blog.</h3> -->
+                <h1 class="display-1">
+                    Hi Admin!!
+                </h1>
+
+                <a href="#0" class="page-header__search-trigger">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <span>Search</span>
+                </a>
+                <div class="page-header__search">
+                    <form role="search" method="post" class="page-header__search-form" action="/admin/show">
+                        <!-- <label>
+                            <span class="hide-content">Search for:</span> -->
+                            <button class="back" onclick="goBack()"><i class="fas fa-arrow-left"></i></button>
+                            <input type="search"  name="id" placeholder="Enter Patient Id">
+                            <br>
+                            <input type="hidden" name="_csrf" value=<%=csrfTok%>>
+                            <button class="btn btn-success"type="submit">Search</button>
+                        <!-- </label> -->
+                        <!-- <input type="text"  value="Search"> -->
+                    </form>
+
+                    <!-- <a href="#0" title="Close Search" class="page-header__overlay-close">Close</a> -->
+                </div>  <!-- end page-header__search -->
+
+            </div>
+        </div>
+
+    </section>
+    <%if(data){%>
+    <section id="about" class="s-about target-section">
+
+      <div class="row">
+          <div class="col-full text-center" data-aos="fade-up">
+              <h2 class="display-2">Your Information</h2>
+
+              <table class="detail">
+                <tbody class="data">
+                  <tr>
+                    <td>Name</td>
+                    <td><%=name%></td>
+                  </tr>
+                  <tr>
+                    <td>Gender</td>
+                    <td><%=gender%></td>
+                  </tr>
+                  
+                  <tr>
+                    <td>General State of Health</td>
+                    <td><%=heathstatus%></td>
+                  </tr>
+                  <tr>
+                    <td>Your Current Medical Symptoms</td>
+                    <td><%=symptions%></td>
+                  </tr>
+                  <tr>
+                    <td>Diseases you had in childhood</td>
+                    <td><%=diseases%></td>
+                  </tr>
+                  <tr>
+                    <td>Addictions</td>
+                    <td><%=addition%></td>
+                  </tr>
+                  <tr>
+                    <td>Allergies</td>
+                    <td><%=allergies%></td>
+                  </tr>
+                  <tr>
+                    <td>Past Hospitalizations</td>
+                    <td><%=hospitalized%></td>
+                  </tr>
+                  <tr>
+                    <td>Additional Information</td>
+                    <td><%=additionalinfo%></td>
+                  </tr>
+                  <tr>
+
+                </table>
+
+      </div>
+      </div>
+    </section>
+    <%}%>
+    <script src="/js/jquery-3.2.1.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
+
+
+</body>
+</html>

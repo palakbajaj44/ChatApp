@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Patient Connect</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body id="top">
+
+    <!-- <div id="preloader">
+        <div id="loader"></div>
+    </div> -->
+
+  <div class="view">
+    <div class="contain">
+      <div class="col-lg-10">
+
+        <div class="panel-heading" style="background-color:#000099;color:white;" >
+          <h1 style="color:white; text-align:center;">Medical History Form</h1>
+          <p>Fill the medical history form to receive complete support needed at the time of crisis. We will create your medical profile in our database and it will be accessible by different hospitals.</p>
+        </div>
+        <div class="panel-body">
+        <form action="/update" method="post">
+          <div class="form-group">
+            <label for="name"> Name:</label>
+            <input type="name" class="form-control" name="name" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="sel1">Gender:</label>
+            <select class="form-control" id="sel1" name="gender"required>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Transgender</option>
+              <option>Others</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="dob"> Date of Birth:</label>
+            <input type="date" class="form-control" name="dob"id="dob" required>
+          </div>
+          <div class="form-group">
+            <p><b>What is your general state of health?</b></p>
+            <div class="radio">
+              <label><input type="radio" name="optradio" value="Excellent">Excellent</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio" value="Good">Good</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio" value="Fair">Fair</label>
+            </div>
+            <div class="radio">
+              <label><input type="radio" name="optradio" value="Poor">Poor</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sym"> Medical Symptoms you are facing currently (if any):</label>
+            <textarea class="form-control" rows="3" name="symptions" id="sym"></textarea>
+          </div>
+          <div class="form-group">
+            <p><b>Diseases you had in childhood:</b></p>
+            <div class="checkbox">
+              <label><input type="checkbox" name="diseases" value="Chickenpox">Chickenpox</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="diseases" value="Whooping cough">Whooping cough</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="diseases" value="Erythema infectiosum">Erythema infectiosum</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="diseases" value="Three-day-fever (roseola infantum)">Three-day-fever (roseola infantum)</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="diseases" value="Hand, foot and mouth disease">Hand, foot and mouth disease</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="diseases" value="Scarlet fever">Scarlet fever</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" id="other" onclick="show_txtar()">Other</label>
+              <textarea class="form-control" rows="1" name="diseases" id="txt"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <p><b>Are you addicted to:</b></p>
+            <div class="checkbox">
+              <label><input type="checkbox" name="addition" value="Smoking">Smoking</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="addition" value="Alcohol">Alcohol</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="addition" value="Drugs">Drugs</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="addition" value="Caffeine">Caffeine</label>
+            </div>
+          </div>
+
+    <div class="form-group">
+      <label for="al"> Do you have any allegies? If any specify them:</label>
+      <textarea class="form-control" rows="2" name="allergies" id="al"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="hospital"> Did you get hospitalized for any illness in the past:</label>
+      <textarea class="form-control" rows="2" name="hospitalized" id="hospital"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="addinfo"> Additional information you want to add:</label>
+      <textarea class="form-control" rows="5" name="additionalinfo" id="addinfo"></textarea>
+    </div>
+      <input type="hidden" name="_csrf" value=<%=csrfTok%>>
+          <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+      </div>
+
+    </div>
+
+
+
+  </div>
+  </div>
+  <!-- <div class="set_img">
+    <img src="images/form.jpg" alt="lol">
+
+  </div> -->
+
+  <script src="js/use.js"></script>
+
+</body>

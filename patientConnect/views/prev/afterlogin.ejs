@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=title%></title>
+</head>
+<body>
+	<h1>Welcome To the Logged in <%=user%>!!!!<h1>
+	<a href="/update">Update Info</a>
+	<form action="/logout" method='post'>
+		<input type="hidden" name="_csrf" value=<%=csrfTok%>>
+		<button type="submit">Logout</button>
+	</form>
+
+</body>
+</html>

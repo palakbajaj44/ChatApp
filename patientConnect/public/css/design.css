@@ -1,0 +1,110 @@
+.bg-img {
+
+  background-image: url(/images/do.jpg');
+  height: 69rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+/* Add styles to the form container */
+.container1 {
+  position: relative;
+  top: 5rem;
+  bottom: 8rem;
+  left: 25rem;
+  margin: 20px;
+  max-width: 400px;
+  padding: 16px;
+  background-color: #fafaff;
+  border-color: blue;
+  border-radius: 2rem;
+
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.formhead{
+  text-align:center;
+  font-weight: bolder;
+}
+
+.container2 {
+  position: relative;
+  top: 2rem;
+  bottom: 8rem;
+  left: 25rem;
+  margin: 20px;
+  max-width: 400px;
+  padding: 16px;
+  background-color: #fafaff;
+  border-color: blue;
+  border-radius: 2rem;
+
+}
+
+.containerr{
+  background-image: url('bgg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contain{
+  position: absolute;
+  max-width: 60%;
+  margin: auto;
+  padding: 1rem;
+  background-color: aliceblue;
+}
+
+.bg1-img {
+
+  background-image: url('images/add.jpg');
+  height: 69rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.container10 {
+  position: relative;
+  top: 10rem;
+  bottom: 8rem;
+  left: 50rem;
+  margin: 20px;
+  max-width: 400px;
+  padding: 16px;
+  background-color: #f2e6d9;
+  border-color: blue;
+  border-radius: 1rem;
+
+}
+.set_img{
+position: absolute;
+right: 0;
+margin: 20px;
+max-width: 300px;
+padding: 16px;
+}
+
+.view{
+  background-color: black;
+
+}
+.back{
+  margin-left: inherit;
+  background-color: transparent;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign In</title>
+</head>
+<body>
+	<nav>
+		<a href="/login">Sign In</a>
+		<a href="/register">Register</a>
+	</nav>
+	<div>
+		<%if( errorMessage){%>
+		<div><%=errorMessage%></div>
+		<%}%>
+		<form action="/login" method="post">
+			<label for='email'>Email:</label>
+			<input type="email" name="email" id="email" required><br>
+			<label for='password'>Password:</label>
+			<input type="password" name="password" id="password" required><br>
+			<input type="hidden" name="_csrf" value=<%=csrfTok%>>
+			<button type="submit">Login</button>
+		</form>
+	</div>
+</body>
+</html>
